@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'LED Digital 7';
+    src: url('Fonts/led_digital_7.ttf');
+}
+
+* {
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    /* Colors */
+    --dark-liver: #54494b;
+    --mint-cream: #f1f7ed;
+    --turquoise-green: #91c7b1;
+    --bright-maroon: #b33970;
+    --flax: #e3d081;
+    /* size settings */
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    font-size: 1.6rem;
+}
+
+#stopwatch-container {
+    flex-direction: column;
+    width: 70vw;
+    height: 400px;
+    gap: 40px;
+    border-radius: 10px;
+    background: var(--dark-liver);
+    color: var(--mint-cream);
+}
+
+#general-display {
+    flex-direction: column;
+    width: 100%;
+}
+
+#display-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#current-date {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#record-container {
+    height: auto;
+    width: 200px;
+}
+
+
+/* Button Settings */
+
+#buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    border: var(--mint-cream) 1px solid;
+    border-radius: 20px;
+    color: var(--mint-cream);
+    background: transparent;
+    font-weight: 600;
+}
+
+button:hover:nth-child(1) {
+    transition: 0.5s;
+    background-color: #11c7a9;
+    box-shadow: 0px 0px 15px 5px var(--turquoise-green);
+}
+
+button:hover:nth-child(2) {
+    background-color: var(--bright-maroon);
+    box-shadow: 0px 0px 15px 5px var(--bright-maroon);
+    transition: 0.5s;
+}
+
+button:hover:nth-child(3) {
+    background-color: var(--flax);
+    box-shadow: 0px 0px 15px 5px var(--flax);
+    transition: 0.5s;
+}
+
+button:hover:nth-child(4) {
+    color: #54494b;
+    background-color: var(--mint-cream);
+    box-shadow: 0px 0px 15px 5px var(--mint-cream);
+    transition: 0.5s;
+}
+
+button:hover:nth-child(5) {
+    color: #54494b;
+    background-color: var(--mint-cream);
+    box-shadow: 0px 0px 15px 5px var(--mint-cream);
+    transition: 0.5s;
+}
+
+/* Record Table */
+
+#record-container {
+    background-color: var(--dark-liver);
+    border-radius: 10px;
+}
+
+tr, td, th {
+    color: var(--mint-cream);
+    background-color: var(--dark-liver);
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+/* Classes */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital-7 {
+    font-family: 'LED Digital 7';
+    font-size: 5.5rem;
+    color: var(--flax);
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        flex-direction: column;
+    }
+    #stopwatch-container {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html,
+    body {
+        height: 100%;
+        flex-direction: column;
+    }
+    #stopwatch-container {
+        width: 95vw;
+        height: auto;
+    }
+    .digital-7 {
+        font-size: 4rem;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    html,
+    body {
+        flex-direction: column;
+    }
+    #stopwatch-container {
+        width: 95vw;
+        height: auto;
+    }
+    .digital-7 {
+        font-size: 4rem;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+    span {
+        padding: 0;
+    }
+    #current-date {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 10px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html,
+    body {
+        flex-direction: column;
+    }
+    #stopwatch-container {
+        width: 95vw;
+        height: auto;
+    }
+    .digital-7 {
+        font-size: 3rem;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+    span {
+        padding: 0;
+    }
+    #current-date {
+        font-size: 0.9rem;
+    }
+    button {
+        font-size: 10px;
+        width: 60px;
+    }
+}

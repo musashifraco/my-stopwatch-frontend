@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="flex">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopwatch</title>
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="Assets/5659580491595759951.svg" type="image/x-icon" />
+</head>
+
+<body class="flex">
+    <!-- display -->
+    <div id="stopwatch-container" class="flex">
+        <div id="general-display" class="flex">
+            <div id="display-container">
+                <span>
+            <span id="hh" class="digital-7">00</span>
+                <span class="text">Hr</span>
+                </span>
+                <span>
+            <span id="mm" class="digital-7">00</span>
+                <span class="text">Min</span>
+                </span>
+                <span>
+            <span id="ss" class="digital-7">00</span>
+                <span class="text">Sec</span>
+                </span>
+                <span>
+            <span id="ml" class="digital-7">00</span>
+                <span class="text">Ms</span>
+                </span>
+            </div>
+            <span id="current-date"></span>
+        </div>
+        <!-- buttons -->
+        <div id="buttons" class="flex">
+            <button onclick="start()" id="start">Iniciar</button
+        ><button onclick="pause()" id="pause">Pausar</button
+        ><button onclick="stop()" id="stop">Reiniciar</button>
+            <button onclick="recordd()" id="record">Registrar</button>
+            <button id="clean" onclick="clean()">Limpar Registro</button>
+        </div>
+    </div>
+    <!-- record table -->
+    <div id="record-container" class="">
+        <table id="record-table">
+            <tr>
+                <th>Record Number</th>
+                <th>Time</th>
+            </tr>
+            <tbody id="record-table-body"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
